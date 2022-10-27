@@ -1,0 +1,18 @@
+{% extends "home/index.html" %}
+{% load static %}
+
+
+{% block after_content %}
+
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-primary" value="Guardar coche" />
+    </form>
+</div>
+
+<!-- Divider-->
+<hr/>
+
+{% endblock %}

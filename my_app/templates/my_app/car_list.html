@@ -1,0 +1,17 @@
+{% extends "home/index.html" %}
+{% load static %}
+
+
+{% block after_content %}
+
+{% for car in cars %}
+    <!-- Post preview-->
+    <div class="card-body">
+        <h2>La marca del coche {{ car.brand }}</h2>
+        <h3>modelo: {{ car.model }}</h3>
+    </div>
+    <!-- Divider-->
+    <hr/>
+{% endfor %}
+
+{% endblock %}
